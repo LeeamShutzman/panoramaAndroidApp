@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="10dp"
+        >
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:id="@+id/leftImage"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/totalLayout"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/leftImage"
+            app:layout_constraintEnd_toStartOf="@+id/icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/totalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginBottom="15dp"
+                android:text="Net Worth"
+                android:textColor="?colorOnPrimary"
+                android:textSize="26dp"
+                app:layout_constraintEnd_toEndOf="@id/totalNumber"
+                app:layout_constraintStart_toStartOf="@id/totalNumber"
+                app:layout_constraintBottom_toTopOf="@id/totalNumber" />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/totalNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-thin"
+                android:text="$70,000"
+                android:textColor="?colorOnPrimary"
+                android:textSize="55dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:id="@+id/icon"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

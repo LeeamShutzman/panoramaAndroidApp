@@ -1,0 +1,117 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.addBudgetFirstPage.AddBudgetFirstPageFragment"
+    android:orientation="vertical"
+    app:titleTextAppearance="@font/arizonia">
+
+
+    <EditText
+        android:id="@+id/budgetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textShortMessage"
+        android:hint="Budget Name"
+        android:textColorHint="?colorOnPrimary"
+        android:backgroundTint="?colorOnPrimary"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:textColor="?colorOnPrimary"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/budgetTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/assetButtonPhoto"
+        app:layout_constraintStart_toStartOf="@id/assetButtonPhoto"
+        app:layout_constraintEnd_toEndOf="@id/assetButtonPhoto"
+        android:text="Select Budget Type:"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="?colorOnPrimary"
+        android:layout_gravity="center"></TextView>
+
+    <RadioGroup
+        android:id="@+id/budgetType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+
+            android:id="@+id/spendingOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Spending"
+            android:layout_marginRight="10dp"/>
+        <RadioButton
+            android:id="@+id/savingOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saving"
+            android:textColor="?colorOnPrimary"
+            android:layout_marginLeft="10dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/budgetLimitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/assetButtonPhoto"
+        app:layout_constraintStart_toStartOf="@id/assetButtonPhoto"
+        app:layout_constraintEnd_toEndOf="@id/assetButtonPhoto"
+        android:text="Limit:"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="?colorOnPrimary"
+        android:layout_gravity="center"></TextView>
+
+    <EditText
+        android:id="@+id/budgetLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:layout_marginHorizontal="50dp"
+        android:hint="$0.00"
+        android:textColorHint="?colorOnPrimary"
+        android:backgroundTint="?colorOnPrimary"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textColor="?colorOnPrimary"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:background="@drawable/blank"
+        android:src="@drawable/ic_baseline_arrow_circle_right_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="225dp"
+        android:layout_gravity="center"></ImageButton>
+
+    <TextView
+        android:id="@+id/nextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/assetButtonPhoto"
+        app:layout_constraintStart_toStartOf="@id/assetButtonPhoto"
+        app:layout_constraintEnd_toEndOf="@id/assetButtonPhoto"
+        android:text="Next"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="?colorOnPrimary"
+        android:layout_gravity="center"></TextView>
+
+
+</LinearLayout>
